@@ -1,3 +1,16 @@
+# References
+# * Creating Submodules
+# http://www.vogella.com/tutorials/GitSubmodules/article.html
+# Add submodule and define the master branch as the one you want to track.
+# git submodule add -b master [URL to Git repo]
+# git submodule init
+# * Renaming Submodules
+# https://stackoverflow.com/questions/4526910/rename-a-git-submodule
+# git mv A B
+#
+# Update .gitmodules. / mv oldpath newpath / git rm oldpath / git add newpath /
+# git submodule sync
+
 [submodule "dashboardia-server"]
 	path = dashboardia-server
 	url = https://github.com/joeflack4/dashboardia-server.git
