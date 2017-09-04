@@ -7,11 +7,8 @@
 # * Renaming Submodules
 # https://stackoverflow.com/questions/4526910/rename-a-git-submodule
 # git mv A B
-#
-# Update .gitmodules. / mv oldpath newpath / git rm oldpath / git add newpath /
-# git submodule sync
 
 [submodule "dashboardia-server"]
-	path = dashboardia-server
+	path = server
 	url = https://github.com/joeflack4/dashboardia-server.git
 	branch = master
