@@ -1,0 +1,4 @@
+[submodule "dashboardia-server"]
+	path = dashboardia-server
+	url = https://github.com/joeflack4/dashboardia-server.git
+	branch = master
