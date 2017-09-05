@@ -72,6 +72,7 @@ testdoc:
 # SERVER MANAGEMENT
 serve:
 	${MANAGE} runserver
+#	flask run
 
 shell:
 	${MANAGE} shell
@@ -79,4 +80,3 @@ shell:
 # TODO: db
 db:
 	${MANAGE} initdb --overwrite
-
