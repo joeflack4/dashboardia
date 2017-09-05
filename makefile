@@ -25,58 +25,45 @@ MANAGE=${PYTHON} ${SERVER_DIR}manage.py
 # ALL LINTING
 lint:
 	${LINT_SRC} && ${CODE_SRC} && ${DOC_SRC}
-
 linttest:
 	${LINT_TEST} && ${CODE_TEST} && ${DOC_TEST}
-
 lintall: lint linttest
-
 
 # PYLINT
 pylint:
 	${LINT_SRC}
-
 pylinttest:
 	${LINT_TEST}
-
 pylintall: pylint pylinttest
 
 # PYCODESTYLE
 code:
 	${CODE_SRC}
-
 codetest:
 	${CODE_TEST}
-
 codeall: code codetest
-
 
 # PYDOCSTYLE
 doc:
 	${DOC_SRC}
-
 doctest:
 	${DOC_TEST}
-
 docall: doc doctest
-
 
 # TESTING
 test:
 	${PYTHON} -m unittest discover -v
-
 testdoc:
 	${PYTHON} -m test --doctests-only
-
 
 # SERVER MANAGEMENT
 serve:
 	${MANAGE} runserver
 #	flask run
-
 shell:
 	${MANAGE} shell
-
-# TODO: db
 db:
+# TODO: Add DB option to manager.
 	${MANAGE} initdb --overwrite
+gunicorn:
+	gunicorn server.dashboardia:app
