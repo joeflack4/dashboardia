@@ -58,12 +58,11 @@ testdoc:
 
 # SERVER MANAGEMENT
 serve:
-#	gunicorn --pythonpath server dashboardia:app
+	gunicorn --pythonpath server dashboardia:app
 #	gunicorn server.dashboardia:app
 #	flask run
 #	${MANAGE} runserver
-	heroku local
-
+#	heroku local
 shell:
 	${MANAGE} shell
 db:
