@@ -58,12 +58,14 @@ testdoc:
 
 # SERVER MANAGEMENT
 serve:
-	${MANAGE} runserver
+#	gunicorn --pythonpath server dashboardia:app
+#	gunicorn server.dashboardia:app
 #	flask run
+#	${MANAGE} runserver
+	heroku local
+
 shell:
 	${MANAGE} shell
 db:
 # TODO: Add DB option to manager.
 	${MANAGE} initdb --overwrite
-gunicorn:
-	gunicorn server.dashboardia:app
