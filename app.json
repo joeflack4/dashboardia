@@ -1,0 +1,51 @@
+{
+  "name": "Dashboardia",
+  "description": "A light-weight, mobile friendly, personal dashboard.",
+  "keywords": [
+    "dashboard",
+  ],
+  "website": "https://www.joeflack.net/",
+  "repository": "https://github.com/joeflack4/dashboardia",
+  "logo": "",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": ""
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": ""
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "1"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "Hobby"
+    }
+  },
+  "image": "heroku/python",
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby",
+      "options": {
+        "version": "9.5"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": ""
+      }
+    }
+  }
+}
