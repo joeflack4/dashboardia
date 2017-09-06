@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath server dashboardia:app
+web: gunicorn --pythonpath ./server dashboardia:app
