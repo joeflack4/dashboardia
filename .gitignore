@@ -1,6 +1,7 @@
 # Dashboardia-specific Ignores
 *_dev
 *_ignored
+*data/
 
 # IDE
 .idea
